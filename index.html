@@ -20,10 +20,14 @@
                     url: "redactor.php",
                     type: "POST",
                     data: "pastedMessage=" + easyPull,
-                    success: function(response)
+                    success: function(response){
+                        console.log(response + "is the response");
+                        $('#messageBox').text(response);
+                    }
+
                 });
 
-                e.ignoreDefault
+                e.preventDefault();
             });
             
             
