@@ -23,6 +23,7 @@
                     success: function(response){
                         console.log(response + "is the response");
                         $('#text-displayer').html(response);
+                        $('#messageBox').fadeOut();
                     }
 
                 });
@@ -33,30 +34,40 @@
             
             $(document).ready(function(){
               $('#text-displayer').click(function(e){
-                  $(e.target).toggleClass("blacked-out");
+                $(e.target).toggleClass("blacked-out");
               });
 
 
             });
 
+
+
             </script>
 
         <div class="mainContent">
             <h2>Redactor.</h2>
-            <h3>Paste text here</h3>
 
-            <textarea name="theMessageBox" id="messageBox"></textarea>
-            <br>
-            <button type="submit" id="buttonID">Submit</button>
+
+                <h3>Paste text here</h3>
+
+                <textarea name="theMessageBox" id="messageBox"></textarea>
+                <br>
+                <button type="submit" id="buttonID">Submit</button>
+
+           
+
             <hr>
-           <h3>Then click to redact: </h3>
-                   
+           
+                <h3>Then click to redact: </h3>
+                        
 
-            <div id="text-displayer">
-                
-              
-            </div>
-        </div>
+                    <div id="text-displayer">
+                        
+                    
+                    </div>
+                </div>
+
+        
         
         <script src="" async defer></script>
     </body>
