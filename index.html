@@ -17,7 +17,7 @@
             $(document).on('click', '#buttonID', function(e){
                 var easyPull = $('#messageBox').val();
                 $.ajax({
-                    url: "redactor.php",
+                    url: "/redactor.php",
                     type: "POST",
                     data: "pastedMessage=" + easyPull,
                     success: function(response){
