@@ -10,6 +10,7 @@ function redactor($input){
         echo '<span class = "text-element" >' . $word . ' ' . '</span>';
     }
 }
+
 redactor($input);
 
 ?>

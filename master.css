@@ -24,9 +24,6 @@
   
 }
 
-.white-out{
-    background: white;
-}
 
 #text-displayer{
     font-size: 3em;
@@ -46,6 +43,8 @@ h2{
     font-size: 5em;
     font-family: 'OCR A Std', Courier, monospace;
     margin: 0px;
+    color: white;
+    background: black;
 }
 
 h3{
