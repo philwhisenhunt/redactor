@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="master.css">
+    </head>
+    <body>
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <script>
+            $(document).on('click', '#buttonID', function(e){
+                var easyPull = $('#messageBox').val();
+
+                easyPullArray = easyPull.split(" ");
+                console.log(easyPull + "is the array");
+
+                var newHTML = easyPullArray.forEach(function(arrayPiece){
+                    return "<span>" + arrayPiece + "</span>";
+                });
+                
+                console.log(newHTML);
+
+                $('#text-displayer').html(newHTML);
+                $('.body-content').hide();
+                $('.lower-body-content').toggleClass('hide-it');
+                  
+
+                e.preventDefault();
+            });
+
+            
+            $(document).ready(function(){
+              $('#text-displayer').click(function(e){
+                $(e.target).toggleClass("blacked-out");
+              });
+
+
+            });
+
+
+
+            </script>
+
+        <div class="mainContent">
+            <div class="headliner">
+
+                <h2>Redactor.</h2>
+            </div>
+
+                <div class="body-content">
+
+
+                        <h3>Paste text here:</h3>
+
+                        <textarea name="theMessageBox" id="messageBox"></textarea>
+                        <br>
+                        <button type="submit" id="buttonID">Submit</button>
+
+                
+                    </div>
+                <div class="lower-body-content hide-it">
+                     <h3>Now click words to redact: </h3>
+                    <div id="text-displayer">
+                
+                      
+                
+                            
+                    </div>
+
+                </div>
+                    
+            </div>
+            
+        
+        
+        <script src="" async defer></script>
+    </body>
+</html>
