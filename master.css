@@ -1,10 +1,49 @@
 #messageBox{
-    width: 50em;
-    height: 20em;
+    width: 100%;
+    height: 100%;
+    
 
 }
 
 .mainContent{
     width:50em;
+    height:10em;
     margin: auto;
+}
+
+.blacked-out{
+    background: black;
+    /* display: inline-block; */
+   /* background-size: 80%; */
+
+
+/* looks neat */
+   /* color: rgb(243, 42, 42);
+   background-color: black; */
+
+  
+}
+
+.white-out{
+    background: white;
+}
+
+#text-displayer{
+    font-size: 3em;
+    font-family: 'OCR A Std', Courier, monospace;
+
+    
+    
+
+}
+
+.text-element{
+    margin: 1px;
+    margin-top:5px;
+}
+
+h2{
+    font-size: 5em;
+    font-family: 'OCR A Std', Courier, monospace;
+    margin: 0px;
 }

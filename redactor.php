@@ -7,7 +7,7 @@ function redactor($input){
     $nowArray = explode(' ', $input);
     
     foreach($nowArray as $word){
-        echo '<span>' . $word . '</span>';
+        echo '<span class = "text-element" >' . $word . ' ' . '</span>';
     }
 }
 redactor($input);

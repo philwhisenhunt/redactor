@@ -22,27 +22,70 @@
                     data: "pastedMessage=" + easyPull,
                     success: function(response){
                         console.log(response + "is the response");
-                        $('#messageBox').text(response);
+                        $('#text-displayer').html(response);
                     }
 
                 });
 
                 e.preventDefault();
             });
+
+            //Now change this make the background black
+            // $(document).ready(function(){
+            //     $('#text-displayer').click(function(e){
+            //         $(e.target).fadeOut(3000);
+
+            //         console.log(e);
+            //     });
+
+            // });
             
+            $(document).ready(function(){
+              $('#text-displayer').click(function(e){
+                  $(e.target).toggleClass("blacked-out");
+              });
+
+
+            });
+
+            //   $(document).ready(function(){
+            //   $('#blacked-out').click(function(e){
+            //       $(e.target).addClass("white-out");
+            //   });
+
+            // });
+            
+
+            //   $(document).ready(function(){
+            //   $('#white-out').click(function(e){
+            //       $(e.target).addClass("blacked-out");
+            //   });
+
+            // });
+
+
+
+                // $("span").addClass("blacked-out");
+                // });
             
             </script>
 
         <div class="mainContent">
+            <h2>Redactor.</h2>
             <h3>Paste text here</h3>
 
             <textarea name="theMessageBox" id="messageBox"></textarea>
             <br>
             <button type="submit" id="buttonID">Submit</button>
+            <hr>
+            <div class="white-out">
+                    Then click to redact: 
+                    </div>
+                   
 
-            <div id="messageBox">
-
-                Your text: 
+            <div id="text-displayer">
+                
+              
             </div>
         </div>
         
