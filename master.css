@@ -19,6 +19,11 @@ width: 50%;
 margin: auto;
 }
 
+.lower-body-content{
+    width: 90%;
+    margin: auto;
+    }
+
 .headliner{
     width: 50%;
     margin: auto;
@@ -51,6 +56,8 @@ margin: auto;
 #text-displayer{
     font-size: 3em;
     font-family: 'OCR A Std', Courier, monospace;
+    /* width: 50%;
+    margin: auto; */
 
     
     
@@ -72,6 +79,12 @@ h2{
 }
 
 h3{
+    font-size: 1em;
+
     font-family: 'OCR A Std', Courier, monospace;
 
+}
+
+.hide-it{
+    display: none;
 }
