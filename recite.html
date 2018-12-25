@@ -17,13 +17,15 @@
         <![endif]-->
         
         <script src="" async defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 
         <script>
         $(document).on('click', "#nameOfButton", function(e){
 
             var thisVar = $('#textArea').val();
             $.ajax({
-                url: 'get.php',
+                url: '/',
                 type: 'GET',
                 data: 'chatMessage=' + thisVar,
                 success: function(response) {
