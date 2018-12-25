@@ -22,7 +22,15 @@
         $(document).on('click', "#nameOfButton", function(e){
 
             var thisVar = $('#textArea').val();
-        })
+            $.ajax({
+                url: 'get.php',
+                type: 'GET',
+                data: 'chatMessage=' + thisVar,
+                success: function(response) {
+                    $('displayer').html(response);
+                }
+            });
+        });
         
         
         
