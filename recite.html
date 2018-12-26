@@ -21,7 +21,20 @@
 
 
         <script>
-     
+            $(document).on('click', '#idOfButton', function(e){
+                var theThing = $('#theTextArea').val();
+                $.ajax({
+                    url: "get.php",
+                    type: "POST",
+                    data: "theMessage=" + theThing,
+
+                    success: function(response){
+                        $('#thePlaceToDisplay').html(response);
+                    }
+                });
+                e.preventDefault();
+
+            });
         
         
         </script>
