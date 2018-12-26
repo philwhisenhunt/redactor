@@ -21,19 +21,7 @@
 
 
         <script>
-        $(document).on('click', "#nameOfButton", function(e){
-
-            var thisVar = $('#textArea').val();
-            $.ajax({
-                url: '/',
-                type: 'GET',
-                data: 'chatMessage=' + thisVar,
-                success: function(response) {
-                    $('displayer').html(response);
-                }
-            });
-        });
-        
+     
         
         
         </script>
