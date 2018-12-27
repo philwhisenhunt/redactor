@@ -26,12 +26,14 @@
            $.ajax({
                url: 'get.php',
                type: 'POST',
-               data: "theMessage=" + nameOfTheVar;
+               data: "theMessage=" + nameOfTheVar,
 
                success: function(response){
                    console.log('the Response is' + response);
+                   $('#displayedText').html(response);
                }
            });
+           e.preventDefault();
        });
         
         
