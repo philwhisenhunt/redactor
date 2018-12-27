@@ -18,7 +18,7 @@
 
 
         <script>
-        $('document').on('click', 'idForButton', function(e){
+        $('document').on('click', '#idForButton', function(e){
 
             var theVarHere = $('idOfTextPlace').val();
             $.ajax({
@@ -27,7 +27,7 @@
                 data: "theMessage=" + theVarHere,
 
                 success: function(response){
-                    $('idOfTextDisplay').html(response);
+                    $('#idOfTextDisplay').html(response);
                 }
             });
             e.preventDefault;
