@@ -18,7 +18,20 @@
 
 
         <script>
-        
+        $('document').on('click', 'idForButton', function(e){
+
+            var theVarHere = $('idOfTextPlace').val();
+            $.ajax({
+                url: "get.php",
+                type: "POST",
+                data: "theMessage=" + theVarHere,
+
+                success: function(response){
+                    $('idOfTextDisplay').html(response);
+                }
+            });
+            e.preventDefault;
+        });
         </script>
     </body>
 </html>
