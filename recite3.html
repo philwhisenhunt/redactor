@@ -20,7 +20,19 @@
 
         <script>
         
-        
+        $(document).on('click', '#idName', function(e){
+            var varName = $('#textarea').val();
+            $.ajax({
+                url: 'get.php',
+                type: "POST",
+                data: 'theMessage=' + varName;
+
+                success: function(response){
+                    $('#displayArea').html(response);
+                }
+            });
+            e.preventDefault();
+        })
         </script>
     </body>
 </html>
