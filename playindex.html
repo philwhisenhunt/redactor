@@ -15,13 +15,13 @@
 
         <script>
             //trying out removing jQuery here
-            // document.getElementById('buttonId').addEventListener('click', function(e){
-            //     const easyPull = document.getElementById('messageBox').value();
-            //     console.log(easyPull);
+            document.getElementById('buttonID').addEventListener('click', function(e){
+                const easyPull = document.getElementById('messageBox').value();
+                console.log(easyPull);
             // });
 
-            $(document).on('click', '#buttonID', function(e){
-                var easyPull = $('#messageBox').val();
+            // $(document).on('click', '#buttonID', function(e){
+            //     var easyPull = $('#messageBox').val();
 
                 easyPullArray = easyPull.split(" ");
                 console.log(easyPull + " is the array");
