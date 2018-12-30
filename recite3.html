@@ -25,7 +25,7 @@
             $.ajax({
                 url: 'get.php',
                 type: "POST",
-                data: 'theMessage=' + varName;
+                data: 'theMessage=' + varName,
 
                 success: function(response){
                     $('#displayArea').html(response);
