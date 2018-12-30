@@ -18,8 +18,10 @@
                 var easyPull = $('#messageBox').val();
 
                 easyPullArray = easyPull.split(" ");
-                console.log(easyPull + "is the array");
+                console.log(easyPull + " is the array");
 
+                //replace forEach with map, because forEach doesn't return anything.
+                //and jQuery may be removable..
                 var newHTML = easyPullArray.forEach(function(arrayPiece){
                     return "<span>" + arrayPiece + "</span>";
                 });
