@@ -14,6 +14,12 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
         <script>
+            //trying out removing jQuery here
+            // document.getElementById('buttonId').addEventListener('click', function(e){
+            //     const easyPull = document.getElementById('messageBox').value();
+            //     console.log(easyPull);
+            // });
+
             $(document).on('click', '#buttonID', function(e){
                 var easyPull = $('#messageBox').val();
 
@@ -22,8 +28,8 @@
 
                 //replace forEach with map, because forEach doesn't return anything.
                 //and jQuery may be removable..
-                var newHTML = easyPullArray.forEach(function(arrayPiece){
-                    return "<span>" + arrayPiece + "</span>";
+                var newHTML = easyPullArray.map(function(arrayPiece){
+                    return "<span>" + arrayPiece + " </span>";
                 });
 
                 console.log(easyPullArray);
