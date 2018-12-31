@@ -88,7 +88,8 @@
 
                 console.log(newHTML);
 
-                $('#text-displayer').html(newHTML);
+                document.getElementById('text-displayer').appendChild(newHTML);
+                // $('#text-displayer').html(newHTML);
                 $('.body-content').hide();
                 $('.lower-body-content').toggleClass('hide-it');
                   
