@@ -17,8 +17,10 @@
 
         <script>
             //trying out removing jQuery here
+            console.log("Page loaded");
            
-            document.getElementById('buttonID').addEventListener('click', function(e){
+            document.getElementById("buttonID").addEventListener("click", function(e){
+                console.log('Second step');
                 const easyPull = document.getElementById('messageBox').value();
                 if(easyPull){
                 console.log(easyPull);
