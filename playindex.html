@@ -58,37 +58,34 @@
 
 
         <script>
-            //trying out removing jQuery here
             console.log("Page loaded");
            
             document.getElementById("buttonID").addEventListener("click", function(e){
-                console.log('Second step');
                 const easyPull = document.getElementById('messageBox').value;
-                if(easyPull){
-                console.log(easyPull);
-                }
-                else {
-                    console.log("It didn't work");
-                }
-            // });
 
-            // $(document).on('click', '#buttonID', function(e){
-            //     var easyPull = $('#messageBox').val();
-
+          
+               
+           
+                //split the array
                 easyPullArray = easyPull.split(" ");
-                console.log(easyPull + " is the array");
+                // console.log(easyPull + " is the array");
 
-                //replace forEach with map, because forEach doesn't return anything.
-                //and jQuery may be removable..
-                var newHTML = easyPullArray.map(function(arrayPiece){
-                    return "<span>" + arrayPiece + " </span>";
+                //old code
+                // var newHTML = easyPullArray.map(function(arrayPiece){
+                //     return "<span>" + arrayPiece + " </span>";
+                // });
+
+                var newHTML = easyPullArray.forEach(function(arrayPiece){
+                  const newSpan = document.createElement('span');
+                  console.log(newSpan);
+                  newSpan.innerHTML = arrayPiece + " ";
+                  document.getElementById('text-displayer').appendChild(newSpan)
                 });
 
                 console.log(easyPullArray);
 
                 console.log(newHTML);
 
-                document.getElementById('text-displayer').appendChild(newHTML);
                 // $('#text-displayer').html(newHTML);
                 $('.body-content').hide();
                 $('.lower-body-content').toggleClass('hide-it');
